@@ -5,32 +5,35 @@
       <h1 *ngIf="number=== true || fractional=== true">Enter the Number</h1>
     </mat-card-title>
     <mat-card-content>
-      <button *ngIf="nomode===false" mat-raised-button color="primary" (click)="settypenumber()">Input Type number</button>
-      <button *ngIf="nomode===false" mat-raised-button color="accent" (click)="settypeFraction()">Input Type Fractional</button>
-        <button *ngIf="nomode===false" mat-raised-button color="accent" (click)="developer()">About developer</button>
+      <button *ngIf="nomode===false" mat-raised-button color="primary" (click)="settypenumber()">Input Type
+        number</button>
+      <button *ngIf="nomode===false" mat-raised-button color="accent" (click)="settypeFraction()">Input Type
+        Fractional</button>
+      <button *ngIf="nomode===false" mat-raised-button color="accent" (click)="developer()">About developer</button>
       <br>
       <form *ngIf="number===true" (ngSubmit)="numbersubmit(f)" #f="ngForm">
-      <mat-form-field appearance="outline" *ngIf="number===true" >
-        <input placeholder="Enter Number"  matInput type="number" name="num" ngModel>
+        <mat-form-field appearance="outline" *ngIf="number===true">
+          <input placeholder="Enter Number" matInput type="number" name="num" ngModel>
         </mat-form-field><br>
-        <button mat-raised-button  type="submit">Submit</button>
-        </form><br>
-         <form *ngIf="fractional===true" (ngSubmit)="fractionSubmit(f)" #f="ngForm">
-      <mat-form-field appearance="outline" >
-        <input placeholder="Enter Numerator"  matInput type="number" name="num" ngModel>
-        </mat-form-field> <mat-form-field appearance="outline" >
-        <input placeholder="Enter denominator"    matInput type="number" name="dem" ngModel>
+        <button mat-raised-button type="submit">Submit</button>
+      </form><br>
+      <form *ngIf="fractional===true" (ngSubmit)="fractionSubmit(f)" #f="ngForm">
+        <mat-form-field appearance="outline">
+          <input placeholder="Enter Numerator" matInput type="number" name="num" ngModel>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <input placeholder="Enter denominator" matInput type="number" name="dem" ngModel>
         </mat-form-field><br><br>
-        <button mat-raised-button  type="submit">Submit</button>
-        </form><br>
-        <h1 *ngIf="ShowOutput===true">
-          Output :{{output}}
-          </h1>
-           <div *ngIf="Developer===true">
-            <h1>Hello From Ayush</h1>
-            </div>
-          <button *ngIf="nomode===true" mat-raised-button (click)="changeMode()">Change Mode</button>
+        <button mat-raised-button type="submit">Submit</button>
+      </form><br>
+      <h1 *ngIf="ShowOutput===true">
+        Output :{{output}}
+      </h1>
+      <div *ngIf="Developer===true">
+        <h1>Hello From Ayush</h1>
+      </div>
+      <button *ngIf="nomode===true" mat-raised-button (click)="changeMode()">Change Mode</button>
 
-      </mat-card-content>
-    </mat-card>
-  </div>
+    </mat-card-content>
+  </mat-card>
+</div>
