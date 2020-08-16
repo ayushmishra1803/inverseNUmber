@@ -10,18 +10,22 @@ export class AppComponent implements OnInit {
   title = 'inversenumber';
   number:boolean=false;
   nomode:boolean=false
-  fractional:boolean=false
+  fractional:boolean=false;
+  Developer:boolean=false;
   output:string
+  ShowOutput:boolean=false;
   ngOnInit(){
 
   }
   settypenumber(){
     this.number=true;
-    this.nomode=true
+    this.nomode=true;
+    this.ShowOutput=true
   }
   settypeFraction(){
     this.fractional=true
-    this.nomode=true
+    this.nomode=true;
+     this.ShowOutput=true
   }
   numbersubmit(f:NgForm)
   {
@@ -35,6 +39,12 @@ export class AppComponent implements OnInit {
     this.number=false;
     this.fractional=false;
     this.nomode=false;
-   this. output=""
+   this. output="";
+    this.ShowOutput=false
+  }
+  developer(){
+    this.Developer=true;
+    this.nomode=true
+
   }
 }
