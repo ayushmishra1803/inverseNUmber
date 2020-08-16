@@ -40,7 +40,8 @@ export class AppComponent implements OnInit {
     this.fractional=false;
     this.nomode=false;
    this. output="";
-    this.ShowOutput=false
+    this.ShowOutput=false;
+    this.Developer=false
   }
   developer(){
     this.Developer=true;
