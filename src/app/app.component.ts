@@ -7,7 +7,9 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'inversenumber'; number: boolean = false; nomode: boolean = false; fractional: boolean = false;
+  title = 'inversenumber';
+  number: boolean = false;
+   nomode: boolean = false; fractional: boolean = false;
   Developer: boolean = false;
   output: string
   ShowOutput: boolean = false;
